@@ -27,6 +27,7 @@ header {
     background-color: #333;
     color: white;
     height:30vh;
+    padding-top:15px;
 }
 nav{
     text-align: center;
@@ -37,16 +38,42 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 }
 
+.search-bar{
+    margin-left:auto;
+}
+.search-bar input {
+    background-color: black;
+    color:white;
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+.search-bar button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    color:orange;
+}
 nav ul li {
     display: inline;
-    margin:50px;
+    margin:0 20px;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
 }
 nav ul li a:hover {
     color: orange; /* Change to the desired color on hover */
@@ -62,7 +89,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
-    width: calc(25% - 2rem);
+    width: 25%;
 }
 
 .product img {
@@ -176,6 +203,9 @@ footer img{
     nav ul {
         display: none; /* Hide regular menu for small screens */
     }
+    .search-bar{
+        display: none;
+    }
 
     nav {
         display: flex;
@@ -238,7 +268,7 @@ footer img{
         padding-top: 1vh;
     }
     .product {
-        width: calc(50% - 2rem); /* Adjust width for smaller screens */
+        width: 50%; /* Adjust width for smaller screens */
     }
 }
 @media (min-width:1000px){
