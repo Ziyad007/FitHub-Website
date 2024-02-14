@@ -3,6 +3,35 @@ body {
     margin: 0;
     padding: 0;
 }
+@keyframes fade-down{
+    0%{
+        opacity:0;
+        transform:translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+@keyframes fade-up {
+    0%{
+        transform:translate(0px, 100px); 
+        opacity: 0;
+    }
+    100%{
+        transform:translate(0px, 0);
+        opacity: 1;
+    }
+}
+@keyframes fade-right {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 h1{
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Offset-x, Offset-y, Blur-radius, Color */ 
@@ -23,18 +52,19 @@ header {
     background-color:black;
     color: #fff;
     padding: 10px;
+    
+
 }
 .Heading{
     background-color: #333;
     color: white;
     height:30vh;
     padding-top:15px;
+    
 }
-nav{
-    text-align: center;
-    background-color: black;
+.title{
+    animation: fade-up 0.5s;
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -59,8 +89,6 @@ nav ul {
     color: white;
     border: none;
     padding: 8px 12px;
-    /* cursor: pointer; */
-    transition: background-color 0.3s ease;
     font-family: 'Noto Serif', serif;
     font-size: 20px;
 
@@ -71,6 +99,7 @@ nav ul {
 }
 nav ul li {
     margin:0 20px;
+    animation: fade-down 0.5s 0.4s backwards;
     
 }
 nav ul li a {
@@ -80,6 +109,9 @@ nav ul li a {
 }
 nav ul li a:hover {
     color: orange; /* Change to the desired color on hover */
+}
+.Title{
+    animation:fade-right 1s 0.5s backwards;
 }
 .featured-products {
     padding: 2rem;
@@ -94,6 +126,7 @@ nav ul li a:hover {
     padding: 1rem;
     margin-bottom: 1rem;
     width: 25%;
+    animation: fade-right 1.5s 0.5s backwards;
 }
 
 .product img {
@@ -269,10 +302,10 @@ footer img{
         cursor: pointer;
         font-size: 20px;
         font-family: 'Noto Serif', serif;
+        animation: fade-down 1s;
     }
     .search-bar {
-        padding-top:10px;
-        padding-bottom: 10px;
+        display: none;
     }
     .Heading {
         background-color: #333;
