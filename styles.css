@@ -111,6 +111,7 @@ nav ul li a:hover {
     color: orange; /* Change to the desired color on hover */
 }
 .Title{
+    padding-left:30px;
     animation:fade-right 1s 0.5s backwards;
 }
 .featured-products {
