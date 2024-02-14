@@ -6,7 +6,8 @@ body {
 h1{
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Offset-x, Offset-y, Blur-radius, Color */ 
-    margin:0;    
+    margin:0;  
+    font-size: 60px;  
 }
 h2{
     font-size: 40px;
@@ -37,14 +38,12 @@ nav{
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding:0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.search-bar{
-    margin-left:auto;
-}
 .search-bar input {
     background-color: black;
     color:white;
@@ -52,6 +51,7 @@ nav ul {
     border: 1px solid orange;
     border-radius: 25px;
     font-size: 12px;
+    width:400px;
 }
 
 .search-bar button {
@@ -59,16 +59,19 @@ nav ul {
     color: white;
     border: none;
     padding: 8px 12px;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: background-color 0.3s ease;
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+
 }
 
 .search-bar button:hover {
     color:orange;
 }
 nav ul li {
-    display: inline;
     margin:0 20px;
+    
 }
 nav ul li a {
     color: white;
@@ -87,6 +90,7 @@ nav ul li a:hover {
 
 .product {
     border: 1px solid #ddd;
+    box-shadow: 5px 5px 5px grey;
     padding: 1rem;
     margin-bottom: 1rem;
     width: 25%;
@@ -114,8 +118,12 @@ nav ul li a:hover {
 p{
     font-size: smaller;
 }
+.Learn-More{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+}
 .btn {
-    margin-top:15px;
     font-size: 20px;
     background-color: #333;
     color: #fff;
@@ -131,13 +139,23 @@ p{
 
 .about {
     background-color: #f9f9f9;
-    padding: 2rem;
+    padding: 1rem;
 }
-
+.about h3{
+    text-shadow: 1px 1px;
+}
 .row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+.Mission{
+    padding:2rem;
+}
+.Founder-Story{
+    padding:2rem;
+}
+.Future-Vision{
+    padding:2rem;
 }
 
 .about h3 {
@@ -145,14 +163,14 @@ p{
 }
 
 .about img {
-    max-width: 50%;
+    max-width: 70%;
     height: auto;
 }
 .contact {
     background-color: #333;
     color: #fff;
     padding: 2rem;
-    /* width: 100%; */
+    width: 100%;
 }
 
 .contact-form {
@@ -192,21 +210,16 @@ p{
     text-align: center;
     padding: 1rem;
     bottom: 0;
-    width: 100%;
 }
 footer img{
     height: 30px;
     padding:10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     nav ul {
         display: none; /* Hide regular menu for small screens */
     }
-    .search-bar{
-        display: none;
-    }
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -257,6 +270,10 @@ footer img{
         font-size: 20px;
         font-family: 'Noto Serif', serif;
     }
+    .search-bar {
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
     .Heading {
         background-color: #333;
         color: white;
@@ -268,10 +285,10 @@ footer img{
         padding-top: 1vh;
     }
     .product {
-        width: 50%; /* Adjust width for smaller screens */
+        width: 70%; /* Adjust width for smaller screens */
     }
 }
-@media (min-width:1000px){
+@media (min-width:1200px){
     .menu-toggle{
         display: none; 
     }
@@ -282,9 +299,3 @@ footer img{
     }
 }
 
-@media (min-width:901px){
-    h1 {
-        font-size: 60px;
-    }
-    
-}
